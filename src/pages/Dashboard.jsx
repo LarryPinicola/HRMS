@@ -8,6 +8,9 @@ import {RiDashboardFill} from 'react-icons/ri'
 const Dashboard = () => {
   // toggle btn for switching sidebar on and off
   const [toggle, setToggle] = useState(false);
+  const toggleSideBar = () => {
+    setToggle(!toggle);
+  }
   return (
     <div className='flex '>
         {/* sidebar */}
@@ -19,7 +22,7 @@ const Dashboard = () => {
             </span>
           </div> */}
           {/* sidebarOpener */}
-          <div className={`${toggle ? "hidden":""} absolute cursor-pointer desktop:top-6 desktop:left-[68px] tablet:top-6 tablet:text-sm tablet:left-[68px] bg-gray-500 hover:scale-125 duration-200 flex justify-center rounded-full  `} onClick={()=>setToggle(!toggle)}>
+          <div className={`${toggle ? "hidden":""} absolute cursor-pointer desktop:top-6 desktop:left-[68px] tablet:top-6 tablet:text-sm tablet:left-[68px] bg-gray-500 hover:scale-125 duration-200 flex justify-center rounded-full  `} onClick={toggleSideBar}>
           <span className="material-symbols-outlined">
             chevron_right
           </span>
@@ -36,7 +39,7 @@ const Dashboard = () => {
             </div>
 
             {/* close btn */}
-            <div className={`${toggle ? "":"hidden"}  cursor-pointer bg-gray-500 hover:scale-125 duration-200 w-6 h-6 flex justify-center items-center rounded-full `} onClick={()=>setToggle(!toggle)}>
+            <div className={`${toggle ? "":"hidden"}  cursor-pointer bg-gray-500 hover:scale-125 duration-200 w-6 h-6 flex justify-center items-center rounded-full `} onClick={toggleSideBar}>
             <span className="material-symbols-outlined text-xl">
             chevron_left
             </span>
