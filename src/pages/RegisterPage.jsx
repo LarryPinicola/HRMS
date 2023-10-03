@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SingUpPic from '../img/signUp.png'
 
 const RegisterPage = () => {
   return (
     <div className="flex justify-between h-screen items-center w-full">
-        <div className=" w-full h-full">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/631/small_2x/flat-isometric-3d-illustration-concept-of-creating-personal-data-for-registration-free-vector.jpg" alt="" className="w-full h-full" />
+        <div className=" ">
+            {/* <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/631/small_2x/flat-isometric-3d-illustration-concept-of-creating-personal-data-for-registration-free-vector.jpg" alt="" className="w-full h-full" /> */}
+            <img src={SingUpPic} alt="" className="w-full h-full" />
         </div>
         <div className="w-full">
             <form action="" className="flex-col gap-2 flex rounded-lg p-5 shadow-lg w-[70%] mx-auto ">
@@ -43,7 +45,7 @@ const RegisterPage = () => {
 
                 {/* btn */}
                 <div className="mt-5 shadow-lg mx-auto">
-                    <button className='text-lg font-semibold cursor-pointer bg-blue-600 rounded tracking-wide text-white px-5 py-1'>Register</button>
+                    <button className='text-lg font-semibold cursor-pointer bg-blue-600 rounded tracking-wide text-white px-5 py-1 hover:scale-125 duration-200 '>Register</button>
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import LoginPic from '../img/loginPic.png'
 
 const LoginPage = () => {
 
@@ -12,8 +12,9 @@ const LoginPage = () => {
 
   return (
     <div className="flex justify-between h-screen items-center w-full">
-        <div className=" w-full h-full">
-            <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" className="" />
+        <div className="">
+            {/* <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" className="" /> */}
+            <img src={LoginPic} alt="" className="w-full h-full" />
         </div>
         <div className="w-full">
             <form action="" onSubmit={submitHandler()} className="flex-col gap-2 flex rounded-lg p-5 shadow-lg w-[70%] mx-auto ">
@@ -39,7 +40,7 @@ const LoginPage = () => {
 
                 {/* btn */}
                 <div className="mt-5 shadow-lg mx-auto">
-                    <button type='submit' className='text-lg font-semibold cursor-pointer bg-blue-600 rounded tracking-wide text-white px-5 py-1'>LogIn</button>
+                    <button type='submit' className='text-lg font-semibold cursor-pointer bg-blue-600 rounded tracking-wide text-white px-5 py-1 hover:scale-125 duration-200 '>LogIn</button>
                 </div>
             </form>
         </div>
