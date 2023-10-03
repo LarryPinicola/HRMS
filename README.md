@@ -1,5 +1,7 @@
 # React + Vite
 
+The current project made with React.js + Vite and TailwindCss is aiming to build a HRMS(Human Resorce Management System).
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
