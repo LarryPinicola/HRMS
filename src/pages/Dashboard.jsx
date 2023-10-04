@@ -90,7 +90,7 @@ const Dashboard = () => {
                 {/* dropdown icon */}
                 <div
                   className={`${toggle ? "" : "hidden"} ${
-                    down ? "rotate-180 duration-100" : "rotate-0 duration-100"
+                    down ? "rotate-0 duration-100" : "rotate-180 duration-100"
                   } select-none`}
                   onClick={toggleDrop}
                 >
