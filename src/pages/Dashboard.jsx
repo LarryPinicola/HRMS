@@ -122,13 +122,18 @@ const Dashboard = () => {
             <div
               className={`${
                 toggle
-                  ? "text-sm font-semibold border-l border-gray-400 py-1 px-2 ms-auto tracking-tight mt-2 w-4/5"
+                  ? "text-sm font-semibold border-l border-gray-400 py-1 px-2 ms-3 tracking-tight mt-2 w-4/5"
                   : "hidden"
               } ${down ? "" : "hidden"} select-none`}
             >
-              <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
-                Employee List
-              </p>
+              <div className="flex items-center gap-3 cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
+              <span className="material-symbols-outlined">
+                list
+              </span>
+                <p className=" ">
+                  Employee List
+                </p>
+              </div>
               <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
                 Attendance
               </p>
