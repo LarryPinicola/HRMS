@@ -11,18 +11,37 @@ const Dashboard = () => {
     setToggle(!toggle);
   };
 
-  // toggle btn for dropdown
+  // toggle btn for employee dropdown
   const [down, setDown] = useState(false);
   const toggleDrop = () => {
     setDown(!down);
   };
+
+  // toggle btn for dashboard
+  const [open ,setOpen ] = useState(false);
+  const toggleDash = () => {
+    setOpen(!open);
+  }
+
+  // toggle btn for acc
+  const [acc, setAcc] = useState(false);
+  const toggleAcc = () => {
+    setAcc(!acc);
+  }
+
+  // toggle btn for setting
+  const [setting, setSetting] = useState(false)
+  const toggleSetting = () => {
+    setSetting(!setting);
+  }
+
   return (
     <div className="flex ">
       {/* sidebar */}
       <div
         className={`${
           toggle ? "desktop:w-72 tablet:w-48 " : "w-20"
-        } duration-500 h-screen bg-gray-300 relative `}
+        } duration-500 h-screen bg-gray-300 relative overflow-y-auto`}
       >
         {/* sidebarOpener */}
         <div
@@ -103,34 +122,66 @@ const Dashboard = () => {
             <div
               className={`${
                 toggle
-                  ? "text-sm border-l border-gray-400 py-1 px-2 ms-auto tracking-wider mt-2 w-4/5"
+                  ? "text-sm font-semibold border-l border-gray-400 py-1 px-2 ms-auto tracking-tight mt-2 w-4/5"
                   : "hidden"
               } ${down ? "" : "hidden"} select-none`}
-              id="submenu"
             >
               <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
-                HelloOne
+                Employee List
               </p>
               <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
-                HelloTwo
+                Attendance
               </p>
               <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
-                HelloThree
+                Leave
               </p>
             </div>
           </div>
 
           {/* Dashboard */}
+          <div className="">
           <div className="flex items-center gap-5 cursor-pointer hover:bg-gray-400 px-3 py-1 rounded-lg duration-200 ">
             <div className="">
               <span className="material-symbols-outlined text-xl">
                 dashboard
               </span>
             </div>
-            <p className={`${toggle ? "" : "hidden"} font-semibold`}>
-              Dashboard
-            </p>
+            <div className="flex  w-full justify-between">
+                <p className={`${toggle ? "" : "hidden"} font-semibold`}>
+                  Dashboard
+                </p>
+                {/* dropdown icon */}
+                <div
+                  className={`${toggle ? "" : "hidden"} ${
+                    open ? "rotate-0 duration-100" : "rotate-180 duration-100"
+                  } select-none`}
+                  onClick={toggleDash}
+                >
+                  <span className="material-symbols-outlined">expand_less</span>
+                </div>
+              </div>
           </div>
+
+          {/* dropdown of the dashboard */}
+            <div
+              className={`${
+                toggle
+                  ? "text-sm font-semibold border-l border-gray-400 py-1 px-2 ms-auto tracking-tight mt-2 w-4/5"
+                  : "hidden"
+              } ${open ? "" : "hidden"} select-none`}
+            >
+              <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
+                Analytic
+              </p>
+              <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
+                Monthly report
+              </p>
+              <p className=" cursor-pointer py-1 px-2  hover:bg-gray-400 rounded-lg mt-1">
+                Pay roll
+              </p>
+            </div>
+          </div>
+          
 
           {/* Files */}
           <div className="flex items-center gap-5 cursor-pointer hover:bg-gray-400 px-3 py-1 rounded-lg duration-200 ">
